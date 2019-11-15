@@ -1,7 +1,10 @@
+## Prof. Non ci sono commenti: così il codice non è manutenibile
+## Prof. Utilizza variabili con nomi immediatamente associabili al loro significato
 xPos=40
 yPos=50
 xVers=+1
 yVers=+1
+## Prof: Utilizza nomi più significativi e facili da comprendere
 zRac=265
 zrac=250
 
@@ -11,6 +14,7 @@ def setup():
     
 def draw():
     global xPos,yPos,xVers,yVers,zRac
+
     background("#072109")
     ellipse(xPos,yPos,50,50)
     xPos=xPos+2.5*xVers
@@ -25,12 +29,12 @@ def draw():
         fill(random(0,255),random(0,255),random(0,255))
     
     rect(zRac,height-25,90,60)
-
+## Prof: Utilizza una variabile per il raggio della pallina: il codice diventa più chiaro
     if yPos+25>height-25 and xPos+25>zRac and xPos-25< zRac+90:
         yVers=-1
         
     rect(zrac,height-510, 90,30)
-    
+## Prof: Utilizza variabili per le dimensioni delle racchette    
     if yPos-25<30 and xPos+25>zrac and xPos-25<zrac+90:
         yVers=+1
     
